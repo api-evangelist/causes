@@ -1,25 +1,76 @@
 aid: causes
+
 name: Causes
-description: 'Causes is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Causes is a technology-driven nonprofit platform that connects donors, volunteers, and organizations to create positive social impact. By aggregating data on charitable initiatives, Causes enables transparent giving, real-time tracking of contributions, and collaborative project management. The platform offers APIs for accessing cause listings, donation processing, volunteer coordination, and impact analytics, empowering developers to build applications that foster community engagement and measurable outcomes across a wide range of social sectors.'
+
 url: https://raw.githubusercontent.com/api-evangelist/causes/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
-- Company
-apis: []
+- Nonprofit
+- API
+- Donations
+- Volunteers
+- Impact
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: Hosts
+  url: hosts/causes-hosts.yml
+- type: Vendors
+  url: vendors/causes-vendors.yml
+- type: Support
+  url: https://www.causes.com/feed/support
+- type: PrivacyPolicy
+  url: https://www.causes.com/privacypolicy
+- type: Newsroom
+  url: https://www.causes.com/feed/news
+- type: Login
+  url: https://www.causes.com/login
+- type: Blog
+  url: https://www.causes.com/feed/blog
+- type: DomainSecurity
+  url: security/causes-domain-security.yml
 - type: Website
   url: https://www.causes.com/
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-22'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.causes.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
